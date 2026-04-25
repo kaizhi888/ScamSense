@@ -1,0 +1,21 @@
+{
+  "eventId": "scamsense-demo-001",
+  "timestamp": "2026-01-15T10:30:00+08:00",
+  "riskScore": 94,
+  "riskLevel": "critical",
+  "reasonCodes": [
+    "AUTHORITY_IMPERSONATION",
+    "MONEY_LAUNDERING_CLAIM",
+    "ACCOUNT_FREEZE_THREAT",
+    "URGENT_TRANSFER_REQUEST",
+    "SUSPICIOUS_EWALLET_RECIPIENT"
+  ],
+  "targetWallet": "masked_tng_018****247",
+  "amount": 2500,
+  "currency": "MYR",
+  "audioShared": false,
+  "transcriptShared": false,
+  "riskScoreShared": true,
+  "demoMode": true,
+  "cloudProviders": ["AWS", "Alibaba Cloud"]
+}

@@ -1,0 +1,135 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+html,
+body {
+  background: #05060A;
+}
+
+/* Scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* Glassmorphism utility */
+@layer components {
+  .glass {
+    @apply bg-white/[0.04] backdrop-blur-xl border border-white/[0.06];
+  }
+  .glass-strong {
+    @apply bg-white/[0.06] backdrop-blur-2xl border border-white/[0.08];
+  }
+  .card {
+    @apply rounded-2xl bg-card-gradient border border-white/[0.06] shadow-glow;
+  }
+  .card-hover {
+    @apply transition-all duration-300 hover:border-white/[0.12] hover:bg-white/[0.05];
+  }
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl bg-privacy px-5 py-3 text-sm font-semibold text-white shadow-glow-privacy transition hover:bg-privacy/90 active:scale-[0.98] disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl bg-white/[0.06] px-5 py-3 text-sm font-semibold text-zinc-100 border border-white/[0.08] transition hover:bg-white/[0.10] active:scale-[0.98] disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+  .btn-danger {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl bg-critical px-5 py-3 text-sm font-semibold text-white shadow-glow-critical transition hover:bg-critical/90 active:scale-[0.98];
+  }
+  .btn-success {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl bg-safe px-5 py-3 text-sm font-semibold text-white shadow-glow-safe transition hover:bg-safe/90 active:scale-[0.98];
+  }
+  .pill {
+    @apply inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-xs font-medium;
+  }
+  .pill-safe {
+    @apply pill bg-safe-soft text-safe ring-1 ring-safe/20;
+  }
+  .pill-suspicious {
+    @apply pill bg-suspicious-soft text-suspicious ring-1 ring-suspicious/20;
+  }
+  .pill-warning {
+    @apply pill bg-warning-soft text-warning ring-1 ring-warning/20;
+  }
+  .pill-critical {
+    @apply pill bg-critical-soft text-critical ring-1 ring-critical/20;
+  }
+  .pill-privacy {
+    @apply pill bg-privacy-soft text-privacy ring-1 ring-privacy/20;
+  }
+  .pill-premium {
+    @apply pill bg-premium-soft text-premium ring-1 ring-premium/20;
+  }
+  .heading-xl {
+    @apply text-4xl md:text-5xl font-bold tracking-tight;
+  }
+  .heading-lg {
+    @apply text-2xl md:text-3xl font-bold tracking-tight;
+  }
+  .heading-md {
+    @apply text-lg md:text-xl font-semibold;
+  }
+  .text-muted {
+    @apply text-zinc-400;
+  }
+  .text-faint {
+    @apply text-zinc-500;
+  }
+}
+
+/* Phone-frame glow */
+.phone-shadow {
+  box-shadow:
+    0 30px 60px -15px rgba(0, 0, 0, 0.6),
+    0 0 0 1px rgba(255, 255, 255, 0.06),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.04);
+}
+
+/* Subtle grain */
+.grain::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 0.04 0'/></filter><rect width='200' height='200' filter='url(%23n)'/></svg>");
+  pointer-events: none;
+  opacity: 0.5;
+  mix-blend-mode: overlay;
+}
+
+/* Risk gradient ring */
+.risk-ring {
+  background: conic-gradient(
+    from 180deg,
+    var(--risk-color, #10b981) var(--risk-pct, 0%),
+    rgba(255, 255, 255, 0.06) var(--risk-pct, 0%) 100%
+  );
+}
+
+/* Live waveform animation */
+@keyframes wave {
+  0%, 100% { transform: scaleY(0.3); }
+  50% { transform: scaleY(1); }
+}
+.wave-bar {
+  animation: wave 0.9s ease-in-out infinite;
+  transform-origin: center;
+}
