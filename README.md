@@ -4,7 +4,7 @@
 
 <br /><br />
 
-[![Live Demo](https://img.shields.io/badge/🌐%20Live%20Demo-scamsense.netlify.app-00C7B7?style=for-the-badge&logo=netlify&logoColor=white)](https://scamsense.netlify.app)
+[![Live Demo](https://img.shields.io/badge/🌐%20Live%20Demo-scamsense--kaizhi.netlify.app-00C7B7?style=for-the-badge&logo=netlify&logoColor=white)](https://scamsense-kaizhi.netlify.app)
 [![Next.js](https://img.shields.io/badge/Next.js-14-black?style=for-the-badge&logo=next.js&logoColor=white)](https://nextjs.org)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://typescriptlang.org)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-3-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)](https://tailwindcss.com)
@@ -302,6 +302,6 @@ This project is a prototype built for competition purposes.
 
 <br />
 
-[![Live Demo](https://img.shields.io/badge/🌐%20Try%20it%20Live-scamsense.netlify.app-00C7B7?style=for-the-badge&logo=netlify&logoColor=white)](https://scamsense.netlify.app)
+[![Live Demo](https://img.shields.io/badge/🌐%20Try%20it%20Live-scamsense--kaizhi.netlify.app-00C7B7?style=for-the-badge&logo=netlify&logoColor=white)](https://scamsense-kaizhi.netlify.app)
 
 </div>
